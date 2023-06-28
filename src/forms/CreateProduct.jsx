@@ -1,7 +1,7 @@
 import { useFormik } from 'formik';
 import { useState, useEffect } from 'react';
 import * as Yup from 'yup';
-import {toast} from 'react-toastify'
+import { toast } from 'react-toastify'
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -82,7 +82,7 @@ const CreateProduct = ({ editProduct, data }) => {
         }
     })
 
-    const navigateTo=()=>{
+    const navigateTo = () => {
         navigate("/product/list", {
             replace: true
         })
@@ -245,7 +245,7 @@ const CreateProduct = ({ editProduct, data }) => {
                             type="file" id="select-image" />
                     </div>
                     <div style={{ margin: '20px 0 0 0', textAlign: 'center' }}>
-                        <Button type="submit" variant="outlined">Add product</Button>
+                        <Button type="submit" variant="outlined">{editProduct ? "Update Product" : "Add product"}</Button>
                     </div>
                 </form>
             </div>
